@@ -47,6 +47,22 @@ note : Committed files will be moved to local git
 git commit -m "components created"
 Local git : Files being tracked
 
+Topics:
+
+1. Exports and imports in react
+2. Git and Git Hub
+3. Git commands
+4. Git Pull request
+
+Tasks:
+
+1. Repeat the class
+2. What is the git conflicts
+3. When to raise PR ?(many commits)
+4. How to switch to previous versions of the code
+5. Github vs bitBucket vs GitLab vs aws (R&D)
+6. What is the link between CICD nd branchs in git
+
 <!-- ---
 
 Person A : 500 rupees
