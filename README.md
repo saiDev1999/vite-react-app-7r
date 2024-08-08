@@ -43,6 +43,10 @@ Working directory : its a folder or files where git was initialized (.git)
 To control what needs to be tracked in the git
 Staging area: : Alll files in the staging area will be tracked by git (git add .)
 
+note : Committed files will be moved to local git
+git commit -m "components created"
+Local git : Files being tracked
+
 <!-- ---
 
 Person A : 500 rupees
