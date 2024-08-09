@@ -1,82 +1,53 @@
-Exports and Imports in react app
+<!-- Javascipt : Synchronous and single thearded language
 
-1. Named Exports :For a particular file , The helper functionality designed component or funtion or variable is assigned with Named
-   Export
-   For a file we can have as many named Export
-   To receive the named exports we must use curly braces
-   To receive the named export with different name we must use "as" keyword
+Synchronous :
 
-2. Default Exports : For a particular file , The main functionality designed component or funtion or variable is assigned with Default Export
+Line by line execution in oreder how we written
 
-for a file we can have only one Default Export
-To receive the Default exports we can call direcyly without curly braces
+Every task must be wait for previous task
 
-To reecive the Default Exports we can use any name
+Drawback : My browser will get frozen or unresponsive when any long running task being happened in code
 
-Phone pay :
+ASynchronous:
 
-1. payment sending --> payments (receive and sending payments) -> 1.0.0
-2. payments (receive and sending payments) + chat -> 1.0.1
+1. Callbacks
+2, Promises
+2. Async and await -->
 
-Git and Git hub: why git ?
+<!-- Vegeatable dish making  -->
 
-1. Version control system ?
-2. Code collab
+1. Chop the vegetables
+2. Cook the vegetables
+3. Serve the vegetables
 
-why git ?
+callback : passing function as argument to another function
 
-1. I cam see versions of code
-2. I can see who written the code
-3. I can collab with different teams , organizations by elimating manual sharing
+We can handle asynchronous js using callbacks ,
 
-Bit bucket , gitLab , AWS
+using the callbacks, there will be callback hell , callback hell makes code difficult to understand and difficult for manintanence
 
-Git hub : Cloud hosting services, (microsoft)\
-npm is the part of gitHub
+Promises
 
-how to check git exists in my local ?
+Puzzle :
 
-git or git --version
+A --- B
 
-Working directory : its a folder or files where git was initialized (.git)
+2min + 1min + 5min + 1min + 10min - > wrong.....
 
-To control what needs to be tracked in the git
-Staging area: : Alll files in the staging area will be tracked by git (git add .)
+2min + 1min + 10min + 2 min + 2min
 
-note : Committed files will be moved to local git
-git commit -m "components created"
-Local git : Files being tracked
+70 year person , 50 year person, 30 year person , 15 year person
 
-Topics:
+10 min , 5 min , 2 min , 1 min
 
-1. Exports and imports in react
-2. Git and Git Hub
-3. Git commands
-4. Git Pull request
+one Torch , at a time 2 persons in a bridge ,
 
-Tasks:
+Total least time :
 
-1. Repeat the class
-2. What is the git conflicts
-3. When to raise PR ?(many commits)
-4. How to switch to previous versions of the code
-5. Github vs bitBucket vs GitLab vs aws (R&D)
-6. What is the link between CICD nd branchs in git
+a. 20 min
 
-<!-- ---
+<!-- b. 19 min -->
 
-Person A : 500 rupees
-
-Sweet shop : 100
-
-SHOP A , SHOP B
-
-Options : -->
-
-<!-- 1. 1000 -->
-<!-- 2. 900 -->
-
-<!-- 2. 600 -->
-
-3. 500
-<!-- 4. None of the above -->
+c. 24 min
+d. 17 min : right answer
+e. 15 min
