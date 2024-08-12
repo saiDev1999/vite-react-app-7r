@@ -3,25 +3,27 @@
 
 
 
-const MainHeading=()=>{
+const MainHeading=(prop)=>{
+    const{heading}=prop
     return(
-        <div>
+  
 
    
-        <h1>Wellcome user</h1>
+        <h1>{heading}</h1>
 
-        </div>
+
     )
 }
 export default MainHeading
 
- export const SecondaryHeading=()=>{
+ export const SecondaryHeading=(prop)=>{
+    const{heading}=prop
     return(
-        <div>
+
 
  
-        <h2>Wellcome user</h2>
-        </div>
+        <h2>{heading}</h2>
+
     )
 }
 

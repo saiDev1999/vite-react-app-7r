@@ -10,11 +10,18 @@
 
 
 
-const CustomList=()=>{
+const CustomList=(prop)=>{
+    const{list}=prop
     return(
-        <ul>
-           <ListItems/>
-        </ul>
+        <ol>
+        <>
+        {
+        list.map((eachFruit,index)=>{
+            return <li key={index} >{eachFruit}</li>
+        })
+        }
+            </>
+        </ol>
     )
 }
 

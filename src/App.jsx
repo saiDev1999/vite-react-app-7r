@@ -1,34 +1,63 @@
 
 import CustomList from "./components/list/list.jsx"
 import { CustomOrderedList } from "./components/list/list.jsx"
-import Tulasi,{ SecondaryHeading as Ranjith } from "./components/heading/headings.jsx"
+import Tulasi,{ SecondaryHeading as Ranjith, SecondaryHeading } from "./components/heading/headings.jsx"
 import CustomImage from "./components/image/image.jsx"
+import CustomButton from "./components/button/button.jsx"
+import MainHeading from "./components/heading/headings.jsx"
+import { recipeData } from "./data/recipeData.js"
 
 
 
 
 const App =()=>{
+
+  const imageListing=[
+    {
+      name:"bag1",
+      src:"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      width:100,
+      height:200,
+    
+    },
+    {
+      name:"bag2",
+      src:"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      width:200,
+      height:200
+    },
+    {
+      name:"bag2",
+      src:"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      width:200,
+      height:200
+    },
+    {
+      name:"bag2",
+      src:"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      width:200,
+      height:200
+    }
+  ]
   return(
     < >
+  {
+    recipeData.map(eachRecipe=>{
+      return(
+        <div key={eachRecipe.id} >
+          <MainHeading heading={eachRecipe.name}   />
+          <CustomImage source={eachRecipe.image} width={200}  height={200}/>
+          <SecondaryHeading heading={"ingredients required"}  />
+          <CustomList list={eachRecipe.ingredients}  />
+          <SecondaryHeading heading={"instructions required"}  />
+          <CustomList list={eachRecipe.instructions}  />
+          <CustomButton  text={"Start preparation"}   />
+        </div>
+      )
+    })
 
-    <h4>Version 1</h4>
-    <h4>Version 2</h4>
-    <h4>Version 3</h4>
-    <h4>Version 4</h4>
-    <h4>Version 5</h4>
+  }
 
-
-      <Tulasi/>
-<Ranjith></Ranjith>
-      <CustomImage/>
-      <CustomImage/>
-      <CustomImage/>
-
-     
-      <CustomList></CustomList>
-    
-
-      <CustomOrderedList/>
     </>
   )
 }

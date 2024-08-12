@@ -1,10 +1,11 @@
 
 
 
-const CustomButton =()=>{
+const CustomButton =(prop)=>{
+    const {text="button",onPress=()=>{},bgColor="green"}=prop
     const buttonText="Click me" 
     return(
-        <button onClick={()=>{}} >{buttonText}</button>
+        <button style={{backgroundColor:bgColor}}  onClick={onPress} >{text}</button>
     )
 }
 

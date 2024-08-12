@@ -1,53 +1,43 @@
-<!-- Javascipt : Synchronous and single thearded language
+Props :
 
-Synchronous :
+Props is an object , which shares the data or information from parent to children component
+Props are immutable
+Props stands for properties
 
-Line by line execution in oreder how we written
+note : Using props i can reuse the component
 
-Every task must be wait for previous task
+Attribute :
 
-Drawback : My browser will get frozen or unresponsive when any long running task being happened in code
+1. additional info to element
+   <img src="" alt="" width="" height=">
 
-ASynchronous:
+2. additional info to components
+   <CustomImage  source=""  alternateText="bag"  >
 
-1. Callbacks
-2, Promises
-2. Async and await -->
+Using the props we can customize the names
+Using the props we can control what needs to display in the user interface
+For the props we can give any names
 
-<!-- Vegeatable dish making  -->
+props are of 2 ways :
 
-1. Chop the vegetables
-2. Cook the vegetables
-3. Serve the vegetables
+1. general prop
+   ex: <CustomImage  source=""  alternateText="bag"  >
+2. children prop
 
-callback : passing function as argument to another function
+destructure :
 
-We can handle asynchronous js using callbacks ,
+const data={
+name:"tulasi",
+score:99
+}
 
-using the callbacks, there will be callback hell , callback hell makes code difficult to understand and difficult for manintanence
+const{name}=data
 
-Promises
+<CustomButton   text="login"  bgColor="green"   >
+<CustomButton   text="sign up"  bgColor="red"   >
 
-Puzzle :
+props can any data type or it can be the function
 
-A --- B
+map method for list rendering
 
-2min + 1min + 5min + 1min + 10min - > wrong.....
-
-2min + 1min + 10min + 2 min + 2min
-
-70 year person , 50 year person, 30 year person , 15 year person
-
-10 min , 5 min , 2 min , 1 min
-
-one Torch , at a time 2 persons in a bridge ,
-
-Total least time :
-
-a. 20 min
-
-<!-- b. 19 min -->
-
-c. 24 min
-d. 17 min : right answer
-e. 15 min
+note : whenever we are using map method always use key prop, key props ensures unique for the each list item(faster updates and deletes)
