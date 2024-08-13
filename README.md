@@ -1,43 +1,37 @@
-Props :
+1.General prop additional to a component <Image source={} alternateText={} />
+2.children prop : children prop is used to nest the components or jsx or text content
+note : To receive the children we must use the children keyword
+2.1 - > jsx
+<Image>
 
-Props is an object , which shares the data or information from parent to children component
-Props are immutable
-Props stands for properties
+<h3>hello </h3>
+<h6>good morning </h6>
 
-note : Using props i can reuse the component
+</Image>
+2.2 - > text
+<Image>
 
-Attribute :
+good afternoon
 
-1. additional info to element
-   <img src="" alt="" width="" height=">
+</Image>
 
-2. additional info to components
-   <CustomImage  source=""  alternateText="bag"  >
+2.3 - > Component
 
-Using the props we can customize the names
-Using the props we can control what needs to display in the user interface
-For the props we can give any names
+<Image>
+<heading/>
 
-props are of 2 ways :
+</Image>
 
-1. general prop
-   ex: <CustomImage  source=""  alternateText="bag"  >
-2. children prop
+Es 6 Features :
 
-destructure :
-
-const data={
-name:"tulasi",
-score:99
-}
-
-const{name}=data
-
-<CustomButton   text="login"  bgColor="green"   >
-<CustomButton   text="sign up"  bgColor="red"   >
-
-props can any data type or it can be the function
-
-map method for list rendering
-
-note : whenever we are using map method always use key prop, key props ensures unique for the each list item(faster updates and deletes)
+1. Arrow functions
+2. Template literals
+3. Destructuring
+4. Imports/Exports
+5. Map,Filter,Reduce
+6. Spread operator
+7. Rest operator
+8. Object literal
+9. default parameters
+10. promises and async await
+11. Sets and Maps

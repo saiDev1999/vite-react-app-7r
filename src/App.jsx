@@ -6,6 +6,8 @@ import CustomImage from "./components/image/image.jsx"
 import CustomButton from "./components/button/button.jsx"
 import MainHeading from "./components/heading/headings.jsx"
 import { recipeData } from "./data/recipeData.js"
+import Greeting from "./components/greeting/greeting.jsx"
+import React from "react"
 
 
 
@@ -39,13 +41,47 @@ const App =()=>{
       height:200
     }
   ]
+
+  const clickedMe=(eachPerson={name:"random",role:"none"})=>{
+
+    fetch("https://fakestoreapi.com/products")
+    .then(response=>response.json())
+    .then(final=>console.log(final))
+    // const {name}=eachPerson
+    // alert(`i am clicked, my name is ${name}`)
+  }
   return(
     < >
-  {
+
+
+    {
+      [{name:"Tulasi",role:"Software developer"},{name:"sive",role:"Mern developer"},{
+        name:"Raju",
+        role:"Angular developer"
+      }].map(eachPerson=>{
+        const {role,name}=eachPerson
+        return (
+          <React.Fragment key={name}>
+
+          <Greeting  text={`I am ${role}`}>{name}</Greeting>
+          <CustomButton  text="click me" bgColor="yellow" onPress={()=>clickedMe(eachPerson)} ></CustomButton>
+          </React.Fragment>
+        )
+      })
+    }
+    
+  {/* {
     recipeData.map(eachRecipe=>{
       return(
         <div key={eachRecipe.id} >
-          <MainHeading heading={eachRecipe.name}   />
+          <MainHeading heading={eachRecipe.name}>
+
+          <SecondaryHeading heading={"ingredients required"}  />
+
+          </MainHeading>
+
+
+
           <CustomImage source={eachRecipe.image} width={200}  height={200}/>
           <SecondaryHeading heading={"ingredients required"}  />
           <CustomList list={eachRecipe.ingredients}  />
@@ -56,7 +92,7 @@ const App =()=>{
       )
     })
 
-  }
+  } */}
 
     </>
   )

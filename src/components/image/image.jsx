@@ -10,3 +10,7 @@ const CustomImage=(props)=>{
     )
 }
 export default CustomImage
+
+
+
+const CustomImage2 =()=><img/>
