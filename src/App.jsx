@@ -1,100 +1,32 @@
 
-import CustomList from "./components/list/list.jsx"
-import { CustomOrderedList } from "./components/list/list.jsx"
-import Tulasi,{ SecondaryHeading as Ranjith, SecondaryHeading } from "./components/heading/headings.jsx"
-import CustomImage from "./components/image/image.jsx"
-import CustomButton from "./components/button/button.jsx"
-import MainHeading from "./components/heading/headings.jsx"
-import { recipeData } from "./data/recipeData.js"
-import Greeting from "./components/greeting/greeting.jsx"
+
 import React from "react"
+import LoginComponent from "./components/chilProp/login"
+import MainHeading from "./components/heading/headings"
 
 
+// const App =()=>{
+//   const type="USER1"
+
+//   switch(type){
+//     case "ADMIN":
+//       return <LoginComponent text="Admin" />
+//     case "USER":
+//       return <LoginComponent text="User" />
+//   case "GUEST":
+//     return <LoginComponent text="Guest" />
+//       default :
+//       return <LoginComponent/>
+//   }
 
 
+  
+// }
 const App =()=>{
-
-  const imageListing=[
-    {
-      name:"bag1",
-      src:"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      width:100,
-      height:200,
-    
-    },
-    {
-      name:"bag2",
-      src:"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      width:200,
-      height:200
-    },
-    {
-      name:"bag2",
-      src:"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      width:200,
-      height:200
-    },
-    {
-      name:"bag2",
-      src:"https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      width:200,
-      height:200
-    }
-  ]
-
-  const clickedMe=(eachPerson={name:"random",role:"none"})=>{
-
-    fetch("https://fakestoreapi.com/products")
-    .then(response=>response.json())
-    .then(final=>console.log(final))
-    // const {name}=eachPerson
-    // alert(`i am clicked, my name is ${name}`)
-  }
   return(
-    < >
-
-
-    {
-      [{name:"Tulasi",role:"Software developer"},{name:"sive",role:"Mern developer"},{
-        name:"Raju",
-        role:"Angular developer"
-      }].map(eachPerson=>{
-        const {role,name}=eachPerson
-        return (
-          <React.Fragment key={name}>
-
-          <Greeting  text={`I am ${role}`}>{name}</Greeting>
-          <CustomButton  text="click me" bgColor="yellow" onPress={()=>clickedMe(eachPerson)} ></CustomButton>
-          </React.Fragment>
-        )
-      })
-    }
-    
-  {/* {
-    recipeData.map(eachRecipe=>{
-      return(
-        <div key={eachRecipe.id} >
-          <MainHeading heading={eachRecipe.name}>
-
-          <SecondaryHeading heading={"ingredients required"}  />
-
-          </MainHeading>
-
-
-
-          <CustomImage source={eachRecipe.image} width={200}  height={200}/>
-          <SecondaryHeading heading={"ingredients required"}  />
-          <CustomList list={eachRecipe.ingredients}  />
-          <SecondaryHeading heading={"instructions required"}  />
-          <CustomList list={eachRecipe.instructions}  />
-          <CustomButton  text={"Start preparation"}   />
-        </div>
-      )
-    })
-
-  } */}
-
-    </>
+    <div>
+      <LoginComponent flag={undefined} />
+    </div>
   )
 }
 
