@@ -3,6 +3,14 @@
 import React from "react"
 import LoginComponent from "./components/chilProp/login"
 import MainHeading from "./components/heading/headings"
+import CustomButton from "./components/button/button"
+import Greeting from "./components/greeting/greeting"
+import style from "./components/greeting/greeting.module.css"
+import CustomRectangleCard from "./components/bootstrap/custom-card"
+import { employeeDetails } from "./data/employeeData"
+import FirstComponent from "./components/bootstrap/first-component"
+
+// import "./App.css"
 
 
 // const App =()=>{
@@ -25,7 +33,20 @@ import MainHeading from "./components/heading/headings"
 const App =()=>{
   return(
     <div>
-      <LoginComponent flag={undefined} />
+      <FirstComponent/>
+
+      {/* {
+        employeeDetails.map(each=>{
+          return(
+            <>
+                <CustomRectangleCard title={each.name} text={each.designation} />
+            </>
+          )
+        })
+      } */}
+
+      
+  
     </div>
   )
 }

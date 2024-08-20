@@ -1,63 +1,37 @@
-1.General prop additional to a component <Image source={} alternateText={} />
-2.children prop : children prop is used to nest the components or jsx or text content
-note : To receive the children we must use the children keyword
-2.1 - > jsx
-<Image>
+js app styles :
 
-<h3>hello </h3>
-<h6>good morning </h6>
+1. inline styles
+2. external styles
 
-</Image>
-2.2 - > text
-<Image>
+Ways to style react application
 
-good afternoon
+1. inline styles or javascript object styles
 
-</Image>
+1. css will be recalculated
+1. readability and maintainence will gets difficult
 
-2.3 - > Component
+1. external css styling
+   drawback :
+1. styles instance will be difficult to identify
 
-<Image>
-<heading/>
+1. external module styling
 
-</Image>
+1. External style sheet or library based styling -
 
-Es 6 Features :
+css frameworks :
+bootstrap, react-bootstrap , tailwind css , material ui , chakra ui , ant design ...
 
-1. Arrow functions
-2. Template literals
-3. Destructuring
-4. Imports/Exports
-5. Map,Filter,Reduce
-6. Spread operator
-7. Rest operator
-8. Object literal
-9. default parameters
-10. promises and async await
-11. Sets and Maps
+2 ways :
 
-LOGIN --- admin, user,
+1. cdn links
+2. npm
 
-const isAdmin = false
-if(isAdmin){
-console.log("welcome Admin")
-}else{
-console.log("welcome user")
-}
+note : bootstrap contains the class names to control the styles where as react bootstrap contains props to control the styles
 
-welcome admin
-welcome user
+Tasks:
 
-react condtional rendering :
-
-We will render UI based on the specific condtion
-
-DRY : DON'T REPEAT YOURSELF
-
-4 ways :
-
-1. if/else
-2. ternary operator
-3. logical and or short circuit (only handles true case) &&
-4. switch cases
-<!-- 5. null or undefined -->
+1. Repeat the class
+2. Create custom components from react bootstrap and bootstrap
+3. Create a corousal component - https://www.npmjs.com/package/react-responsive-carousel
+4. Try tailwind integration in react
+5. Create a header, content with cards, footer
