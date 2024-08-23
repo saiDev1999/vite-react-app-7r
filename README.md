@@ -1,94 +1,48 @@
-2013 - 2018 :
-Functional(dynamic layer) layer -- Class components - StateFull components
-U
-}I layer -- Functional components : - StateLess components
+fetch(URL).then((data)=>data.json()).then(response=>console.log(response))
 
-After 2018 :
-React version update : 16.8 -- Hooks were introduced in funtional components
+const fetchData=async()=>{
+const data = await fetch(URL)
+const finalData=await data.json()
 
-Functional(dynamic) layer + UI layer -- Functional components -- StateFull components
+    console.log(finalData)
 
-do we need Class components and do we need learn Class components ?
+}
 
-1. Legacy projects were running Class components
-2. For learning core concepts of components (Interviews)
+Life cycle method in class component
 
-React team suggesting to use Functional components , They don't have idea to remove class components
+1. component did mount : This method in class component is used to perform the side effects with in the component in the early phase or page load
 
-Class components :
+side effects : fetching data from server , Dom manipulations, Timing events , event listeners
 
-syntax :
-import {Component} from "react"
+note : ComponentDidMount executes only once in a life cycle
+ComponentDidMount is auto invoke method on page load
 
-class Greeting extends Component{
+<React.StrictMode> -- This will trigger the app twice to ensure the early observation of bugs in the application
 
-    render(){
-        return(
-            <h1>Hello</h1>
-        )
-    }
+Fetch method drawbacks :
 
-const Greeting=()=><h1>Hello</h1>
+1. There is no automatic json conversion
+2. Status codes not provided
+3. Intercepting of request and response is not provided by fetch method
 
-ex : Youtube button
+Axios : Axios is a third party package for making http calls in a efficient manner
+npm i axios
 
-subscribe -- Initial state or data
-subscribed -- when user performed click event - data needs to change
+usage :
+import axios from "axios"
 
-React State :
+axios.get(URL).then(response=>console.log(response))
 
-React state is an object which holds the information or data of a particular component
-React State is a private to a component
-State is mutable
-
-State is applicable for both class components nd functional components
-
-How to create a state in class components?
-There are 2 ways to create a state in class components
-
-1. Object way of creation
-2. Contructor way
-
-To access the state in class components , we need to use this.state.property
-To attach the event in class components, we need to use this.methodNamee
-
-Mutuate the state :
-To mutuate the state in class components, we need to use this.setState method
-note: Only way to change the state is by this.setState
-
-setState method syntax :
-it will accept 2 args , 1. Object or function 2. Function
-
-this.setState({
-// state changes here
-},()=>{
-// To check the latest state changes
-})
-
-note : State changes are asynchronous
-note : when we use setState method, component will re-render (re-executed) to show updated changes
-
-room - component
-books - state
-
-puzzle :
-
-A --- B
-
-one boat
-boat can have 2
-
-3 snakes , 3 cats
-
-conditions :
-
-1. if snake count is more , snake will kill cat
+fetchData=async()=>{
+const finalData=await axios.get(URL)
+console.log(finalData)
+}
 
 Tasks :
 
 1. Repeat the class
-2. What is meant by re-render of a component ?
-3. How can we pass data from child to parent ?
-4. Give a button, when we click on button , add new cards , delete cards
-5. Uplifting of state in react
-6. solve the snake and cat puzzle
+2. Using axios , Hit the fakestore api , display in the cards (include instagram card)
+3. Difference between axios and fetch
+4. what is the pure function in js
+5. what is the side effects in js
+6. Filter the products based on the categories - 3 apis

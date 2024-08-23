@@ -16,8 +16,8 @@ const CustomList=(prop)=>{
         <ol>
         <>
         {
-        list.map((eachFruit,index)=>{
-            return <li key={index} >{eachFruit}</li>
+        list.map((eachValue,index)=>{
+            return <li key={index} >{eachValue}</li>
         })
         }
             </>

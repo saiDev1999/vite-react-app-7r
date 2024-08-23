@@ -10,6 +10,7 @@ import CustomRectangleCard from "./components/bootstrap/custom-card"
 import { employeeDetails } from "./data/employeeData"
 import FirstComponent from "./components/bootstrap/first-component"
 import YoutubeButton from "./components/class/youtube-button"
+import RecipeList from "./components/recipeListing/recipeList"
 
 // import "./App.css"
 
@@ -34,7 +35,8 @@ import YoutubeButton from "./components/class/youtube-button"
 const App =()=>{
   return(
     <div>
-      <YoutubeButton/>
+      <RecipeList/>
+      {/* <YoutubeButton/> */}
       {/* <FirstComponent/> */}
 
       {/* {
