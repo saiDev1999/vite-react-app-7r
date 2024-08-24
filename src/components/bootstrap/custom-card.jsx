@@ -5,7 +5,7 @@ import InfiniteLoader from '../loader/infinite-loader';
 import CustomToasts from '../toasts/toasts';
 import InstagramHeart from '../heart/instagram-heart';
 
-function CustomRectangleCard({text,title}) {
+function CustomRectangleCard({text,title,removeHandler,ind}) {
   return (
     <Card >
      
@@ -14,11 +14,11 @@ function CustomRectangleCard({text,title}) {
         <Card.Text>
           {text}
         </Card.Text>
-        <InfiniteLoader color={"red"} />
-        <CustomDNALoader   width={"100"}  visible={true}  />
+        {/* <InfiniteLoader color={"red"} /> */}
+        {/* <CustomDNALoader   width={"100"}  visible={true}  /> */}
         <CustomToasts  message={"I am card"} />
         <InstagramHeart/>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary" onClick={()=>removeHandler(ind)}>Remove</Button>
       </Card.Body>
     </Card>
   );

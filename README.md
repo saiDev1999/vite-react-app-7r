@@ -46,3 +46,31 @@ Tasks :
 4. what is the pure function in js
 5. what is the side effects in js
 6. Filter the products based on the categories - 3 apis
+
+State uplifting :
+
+Communicating with the data to keep parent and child component states in sync
+
+DOM :
+
+When any element changes in the dom, It will reload the entire dom nodes
+It will result poor performance , Loading time increases
+
+React Vdom :
+
+V-DOM : Vdom is a memory representation of a original dom, It will compare the previous and current changes and updates only specific parts of UI
+
+2 algorithms of vdom :
+
+1. Diffing - Diffing compares the previous vdom and current vdom , and check the changes
+2. Reconciliation - Based on the changes observed corresponding layout gets updated leaving rest of UI unchanged
+
+React apps were faster
+
+Tasks:
+
+1. Take a button for adding bulbs in the card
+2. On click of bulb , show on and off cases
+3. Also show the no of bulbs count
+4. Filter the products based on the categories - 3 apis
+5. Create a common table component(Bootstrap or react bootstrap) for different use cases , Hit the api and show data in table

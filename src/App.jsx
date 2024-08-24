@@ -11,6 +11,7 @@ import { employeeDetails } from "./data/employeeData"
 import FirstComponent from "./components/bootstrap/first-component"
 import YoutubeButton from "./components/class/youtube-button"
 import RecipeList from "./components/recipeListing/recipeList"
+import CardAddition from "./components/cardAdd/card-add"
 
 // import "./App.css"
 
@@ -33,9 +34,22 @@ import RecipeList from "./components/recipeListing/recipeList"
   
 // }
 const App =()=>{
+
+
+  const onClick=(childData)=>{
+    console.log(childData)
+
+  }
   return(
     <div>
-      <RecipeList/>
+      {/* <FirstComponent/> */}
+      <CardAddition/>
+      {/* <CustomButton  onPress={onClick}  /> */}
+
+      {/* <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1> */}
+      {/* <RecipeList/> */}
       {/* <YoutubeButton/> */}
       {/* <FirstComponent/> */}
 
