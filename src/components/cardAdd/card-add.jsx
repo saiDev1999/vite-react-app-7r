@@ -24,8 +24,19 @@ class CardAddition extends Component{
   this.setState({
     employeeData:updatedData
   },()=>{
-    toast("Wow so easy!");
-        //  sucessToasts("New Card added1","top-right")
+
+
+
+    setTimeout(() => {
+
+        toast("hello", {
+            autoClose: false,
+            
+          })
+    }, 1000);
+
+
+
 
 
 

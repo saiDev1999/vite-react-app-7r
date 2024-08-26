@@ -12,6 +12,8 @@ import FirstComponent from "./components/bootstrap/first-component"
 import YoutubeButton from "./components/class/youtube-button"
 import RecipeList from "./components/recipeListing/recipeList"
 import CardAddition from "./components/cardAdd/card-add"
+import FetchProducts from "./components/task/task"
+
 
 // import "./App.css"
 
@@ -42,8 +44,11 @@ const App =()=>{
   }
   return(
     <div>
+<CardAddition/>
+      <FetchProducts/>
+
       {/* <FirstComponent/> */}
-      <CardAddition/>
+      {/* <CardAddition/> */}
       {/* <CustomButton  onPress={onClick}  /> */}
 
       {/* <h1 className="text-3xl font-bold underline">
