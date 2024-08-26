@@ -11,6 +11,7 @@ import { employeeDetails } from "./data/employeeData"
 import FirstComponent from "./components/bootstrap/first-component"
 import YoutubeButton from "./components/class/youtube-button"
 import RecipeList from "./components/recipeListing/recipeList"
+import Mounting from "./components/lifeCycle/mounting"
 
 // import "./App.css"
 
@@ -35,7 +36,7 @@ import RecipeList from "./components/recipeListing/recipeList"
 const App =()=>{
   return(
     <div>
-      <RecipeList/>
+   <Mounting  color="red"  />
       {/* <YoutubeButton/> */}
       {/* <FirstComponent/> */}
 
