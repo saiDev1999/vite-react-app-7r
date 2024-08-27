@@ -12,6 +12,7 @@ import FirstComponent from "./components/bootstrap/first-component"
 import YoutubeButton from "./components/class/youtube-button"
 import RecipeList from "./components/recipeListing/recipeList"
 import Mounting from "./components/lifeCycle/mounting"
+import ParentComponent from "./components/purecomponent/parent"
 
 // import "./App.css"
 
@@ -36,7 +37,8 @@ import Mounting from "./components/lifeCycle/mounting"
 const App =()=>{
   return(
     <div>
-   <Mounting  color="red"  />
+      <ParentComponent/>
+   {/* <Mounting  color="red"  /> */}
       {/* <YoutubeButton/> */}
       {/* <FirstComponent/> */}
 
