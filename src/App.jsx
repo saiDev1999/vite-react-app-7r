@@ -13,6 +13,8 @@ import YoutubeButton from "./components/class/youtube-button"
 import RecipeList from "./components/recipeListing/recipeList"
 import Mounting from "./components/lifeCycle/mounting"
 import ParentComponent from "./components/purecomponent/parent"
+import Counter from "./components/hooks/useState/counter"
+import CustomTodo from "./components/hooks/useState/todo"
 
 // import "./App.css"
 
@@ -37,20 +39,8 @@ import ParentComponent from "./components/purecomponent/parent"
 const App =()=>{
   return(
     <div>
-      <ParentComponent/>
-   {/* <Mounting  color="red"  /> */}
-      {/* <YoutubeButton/> */}
-      {/* <FirstComponent/> */}
-
-      {/* {
-        employeeDetails.map(each=>{
-          return(
-            <>
-                <CustomRectangleCard title={each.name} text={each.designation} />
-            </>
-          )
-        })
-      } */}
+      {/* <Counter/> */}
+      <CustomTodo/>
 
       
   
