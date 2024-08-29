@@ -15,6 +15,8 @@ import Mounting from "./components/lifeCycle/mounting"
 import ParentComponent from "./components/purecomponent/parent"
 import Counter from "./components/hooks/useState/counter"
 import CustomTodo from "./components/hooks/useState/todo"
+import UseRefExample from "./components/hooks/useRef/useRefEx"
+import UncontrolledComponent from "./components/hooks/uncontrolled/uncontrolled-form"
 
 // import "./App.css"
 
@@ -39,8 +41,8 @@ import CustomTodo from "./components/hooks/useState/todo"
 const App =()=>{
   return(
     <div>
-      {/* <Counter/> */}
-      <CustomTodo/>
+
+     <UncontrolledComponent/>
 
       
   

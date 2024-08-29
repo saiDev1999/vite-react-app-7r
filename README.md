@@ -1,69 +1,49 @@
-1. Presentation -- functional
-2. Container - class
+useRef :
 
-Hooks :
+useRef is used to persists the values between renders with out causing re-render for the component
 
-1. container -- functional + class components
-2. Presentation -- functional components
+useRef is used to store the previous state
 
-Hooks were introduced in 2018 version 16.8
+useRef is used to access the elements in the dom
 
-Hooks are reusable functions which let us use of state and other react features without writing the class
+syntax :
 
-rules of hooks :
+useRef accepts initial argument and returns the object
 
-1. Hooks were only used in functional , it doesn't support in class
-2. Hooks must always call at the top of the component and must import only from react
-3. Hooks cannot be used inside the conditions , loops, switch statements
-4. Hooks cannot be used in event triggerings
+object contains current proprty
 
-examples :
+To access the content from the object , we need to use object.current
 
-1. useState
-2. useEffect
-3. useRef
-4. useReducer
-5. useContext
-6. useCallback
-7. useMemo
-8. custom hooks ex : useCounter
+React Forms :
 
-useState :
+1. Uncontrolled Component : In uncontrolled components form state controls is controlled DOM, React doesn't have any control with the forms
 
-useState is used in functional based components , it allows us to create and manage the data or information of a particular component
+we cannot field validations
 
-useState is replica of creating of state by contructor and using setState method in class components
+In uncontrolled components , To access the elements from dom we use useRef hook
 
-Syntax :
-useState will accept initial argument
+Steps for uncontrolled components :
 
-useState(10)
+1. Consider form in jsx
+2. To control the input elements in the dom , we need to attach ref attribute for the input element and value will be take from useRef object reference
+3. on Submit to collect the value we will use object.current.value
+4. Validate the inputs and submit the form (post api call)
 
-initial argument can be any data type or function returning a value
-note : this argument is executed only for the first time, corresponding renders will ignore the initial argument changes
+5. Controlled Components: In Controlled components form state controls is controlled by React
 
-useState will return array
+we can do field validations
 
-const counter = useState({})
-
-const [currentEmployee,setCurrentEmployee]=useState({}) ---> Final syntax
-
-This array contains 2 elements 1. current state 2. set function
-
-here in the useState we will always use const keyword which represents immutability of the state directly
-
-The only way to change the state in useState is by using set Function
-
-Tasks :
+Tasks:
 
 1. Repeat the class
-2. Use cards in the todo component
-3. use State - https://react.dev/reference/react/useState
-4. Update the item in todo by chaging updated text in the list
-5. Crete 100 cards , on click of particular card need to even or odd - Heading on the top of screen
+2. Apply css for the today's class
+3. Success full user logins must be filled inside the table
+4. Also give delete button in the table for each user
+5. Difference controlled and uncontrolled components
 
 Topics :
 
-1. Hooks in react
-2. Rules of hooks
-3. UseState usage and examples
+1. Use Ref hook
+2. React forms
+3. Uncontrolled components
+4. Validations
