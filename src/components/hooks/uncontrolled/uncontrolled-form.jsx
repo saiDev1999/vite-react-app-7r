@@ -72,8 +72,8 @@ const UncontrolledComponent =()=>{
         try{
         const response= await axios.post("https://dummyjson.com/auth/login",{
 
-        "username": username,
-        "password":password,
+         username,
+  password,
 
     })
     console.log(response)

@@ -17,6 +17,8 @@ import Counter from "./components/hooks/useState/counter"
 import CustomTodo from "./components/hooks/useState/todo"
 import UseRefExample from "./components/hooks/useRef/useRefEx"
 import UncontrolledComponent from "./components/hooks/uncontrolled/uncontrolled-form"
+import ControlledForm from "./components/hooks/controlled/controlled"
+import ControlledStateForm from "./components/hooks/controlled/controlledState"
 
 // import "./App.css"
 
@@ -42,7 +44,7 @@ const App =()=>{
   return(
     <div>
 
-     <UncontrolledComponent/>
+<ControlledStateForm/>
 
       
   
