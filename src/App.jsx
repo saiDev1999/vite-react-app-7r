@@ -19,6 +19,7 @@ import UseRefExample from "./components/hooks/useRef/useRefEx"
 import UncontrolledComponent from "./components/hooks/uncontrolled/uncontrolled-form"
 import ControlledForm from "./components/hooks/controlled/controlled"
 import ControlledStateForm from "./components/hooks/controlled/controlledState"
+import RecipeComponent from "./components/recipes/recipe"
 
 // import "./App.css"
 
@@ -43,6 +44,8 @@ import ControlledStateForm from "./components/hooks/controlled/controlledState"
 const App =()=>{
   return(
     <div>
+
+      <RecipeComponent/>
 
 <ControlledStateForm/>
 

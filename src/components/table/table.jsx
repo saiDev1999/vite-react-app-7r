@@ -21,9 +21,9 @@ function TableComponent({rowData=[]}) {
         rowData.map(eachRow=>{
             return(
                 <tr>
-        <td>{eachRow.model}</td>
-        <td>{eachRow.mobileNumber}</td>
-        <td>{eachRow.state}</td>
+        <td>{eachRow.data1}</td>
+        <td>{eachRow.data2}</td>
+        <td>{eachRow.data3}</td>
       </tr>
 
             )

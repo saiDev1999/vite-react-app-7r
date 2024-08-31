@@ -38,7 +38,14 @@ const ControlledStateForm=()=>{
 
         console.log(formData)
 
-        setSubmittedData([...submittedData,formData])
+
+        const newFormData={
+            data1:formData.model,
+            data2:formData.mobileNumber,
+            data3:formData.state
+        }
+
+        setSubmittedData([...submittedData,newFormData])
 
         setFormData(initialFormData)
 
