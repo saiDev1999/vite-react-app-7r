@@ -20,6 +20,9 @@ import UncontrolledComponent from "./components/hooks/uncontrolled/uncontrolled-
 import ControlledForm from "./components/hooks/controlled/controlled"
 import ControlledStateForm from "./components/hooks/controlled/controlledState"
 import RecipeComponent from "./components/recipes/recipe"
+import UseEffectExample from "./components/hooks/useEffect/useEffectEx"
+// import UseEffectExample2 from "./components/hooks/useEffect/useEffectEx2"
+import UseEffectExample3 from "./components/hooks/useEffect/useEffectEx3"
 
 // import "./App.css"
 
@@ -44,10 +47,14 @@ import RecipeComponent from "./components/recipes/recipe"
 const App =()=>{
   return(
     <div>
+      <UseEffectExample3/>
 
-      <RecipeComponent/>
+      {/* <UseEffectExample2/> */}
+      {/* <UseEffectExample/> */}
 
-<ControlledStateForm/>
+      {/* <RecipeComponent/>
+
+<ControlledStateForm/> */}
 
       
   
