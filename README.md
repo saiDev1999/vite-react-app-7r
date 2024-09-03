@@ -1,54 +1,42 @@
-useEffect : useEffect is a react functional hook which is used to cause side effects with in the component
+React-router-dom - To provide navigation in react app , we don't use anchor tags instead we have dedicated package or library called React-router-dom
 
-side effects : async actions - dom manipulations, event listeners, data fetching, third party subscribtions
+npm i react-router-dom
 
-useEffect is replacement of 3 life cycle methods in class components
+https://www.zomato.com -- Base URL
+/partner-with-us - static part with loads static UI
 
-1. componentDidMount
-2. componentDidUpdate
-3. componentWillUnmount
+https://www.zomato.com -- Base URL
+/hyderabad -- Dynamic part
+/swagth-hotel-charminar -- Dyanmic part
+/order -- static
 
-syntax : useEffect(()=>{},[])
+Types of navigations :
 
-note : useEffect behaviour will depends on 2 argument which is an array
+1. Static navigations
+2. dynamic navigations
+3. Nested navigations
 
-case 1: if array is empty , useEffect will behave like componentDidMount
-it will run only once in a life cycle
+http://localhost:5173/ -- Base URL
 
-useEffect(()=>{},[])
+4. Homescreen - http://localhost:5173/
+5. Aboutscreen - http://localhost:5173/about
+6. Settingscreen - http://localhost:5173/settings
+7. Contactscreen - http://localhost:5173/contact
 
-case 2 : if array is filled with values , depending upon value changes useEffect will behave like a componentDidUpdate
+8. ProductDetailScreen -
+   http://localhost:5173/product/1
+   http://localhost:5173/product/2
+   ....
 
-useEffect(()=>{},[value1,value2...])
-if values were changing useEffect will re-runs
+In react router dom , they are 2 ways to navigate to a screen
 
-this arry will call it as the dependency array
+1. Link component and NavLink provided by react router dom
+2. useNavigate hook provided by react router dom -- programitical navigation
 
-case 3 : No dependency array
+Tasks:
 
-useEffect(()=>{})
-
-if no dependency array , component will keep on re-rendering when ever state or prop changes
-it might also leads to infinite rendering of component
-
-case 4 : if useEffect callback functions returns the funtion , with in the returned function we can prevent memory leaks of the component - componentWillUnmount
-
-useEffect(()=>{
-return ()=>{
-// prevent the memory leaks
-}
-},[])
-
-Topic:
-
-1. UseEffect hook
-2. Examples and use cases of useEffect
-
-Tasks :
-
-1. Repeat the class - understand the code flow
-2. 5 examples for useState, useRef and useEffect
-3. based on the button events , show the corresponding data in the tables
-4. Tab switching in react
-5. document the discussed hooks
-6. useEffect , useLayOutEffect , which is better
+1. Repeat the class
+2. Fill all the screens with content - login , registration , about
+3. why not to use anchor tags in react
+4. Difference between static and dynamic navigations
+5. Design a side bar and provide navigations
