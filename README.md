@@ -10,6 +10,9 @@ https://www.zomato.com -- Base URL
 /swagth-hotel-charminar -- Dyanmic part
 /order -- static
 
+https://www.zomato.com/category/electronics
+https://www.zomato.com/category/jewellery
+
 Types of navigations :
 
 1. Static navigations
@@ -40,3 +43,14 @@ Tasks:
 3. why not to use anchor tags in react
 4. Difference between static and dynamic navigations
 5. Design a side bar and provide navigations
+
+useParams:
+It is used to collect the dynamic part of the url
+
+Tasks:
+
+1. Repeat the class
+2. Fill the categories screen with all categories
+3. give product detail screen for every product inside categories screen
+4. recipes and recipe detail screens in new react project
+5. what is lazy loading in react
