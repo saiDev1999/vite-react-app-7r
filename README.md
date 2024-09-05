@@ -1,56 +1,39 @@
-React-router-dom - To provide navigation in react app , we don't use anchor tags instead we have dedicated package or library called React-router-dom
+useState - local state management
 
-npm i react-router-dom
+Types of state management :
 
-https://www.zomato.com -- Base URL
-/partner-with-us - static part with loads static UI
+1. local state management - creating and managing data with in the component (useState)
+2. global state management - creating and managing can be done through out the application
 
-https://www.zomato.com -- Base URL
-/hyderabad -- Dynamic part
-/swagth-hotel-charminar -- Dyanmic part
-/order -- static
+global state management 3 techniques :
 
-https://www.zomato.com/category/electronics
-https://www.zomato.com/category/jewellery
+1. Props -- prop drilling : passing data to the final component through out every level of component tree , even though intermediate components not using the data
 
-Types of navigations :
+drawbacks:
 
-1. Static navigations
-2. dynamic navigations
-3. Nested navigations
+Code Complexity: As components grow, prop drilling increases code complexity as it is difficult to track the flow of data through various components.
+Reduced Maintainability: It will become very challenging to maintain the code with prop drilling. When changes are required in the data flow, you need to make changes in many components.
+Performance Overhead: We have to pass props through unnecessary intermediary components which can impact performance.
+Decreased Component Reusability: Components used in prop drilling become tightly coupled to the structure of the parent components, so it very difficult to use it on other parts of the application.
+Increased Development Time: Prop drilling often requires additional planning to implement. This can slow down the development process, especially when the component hierarchies is complex.
 
-http://localhost:5173/ -- Base URL
+2. Context api
+3. Redux : third party package
 
-4. Homescreen - http://localhost:5173/
-5. Aboutscreen - http://localhost:5173/about
-6. Settingscreen - http://localhost:5173/settings
-7. Contactscreen - http://localhost:5173/contact
+context api : it is the way to manage the state in react application globally by avoiding prop drilling
 
-8. ProductDetailScreen -
-   http://localhost:5173/product/1
-   http://localhost:5173/product/2
-   ....
+steps to create context api in react app:
 
-In react router dom , they are 2 ways to navigate to a screen
+1. Identify the set of components that needs to share the data -- whole app
+2. create some data ex: username:"sai" -- and react will provide createContext method for creating the context
+3. wrap the created context using provider and pass value prop for the wrapped provider
 
-1. Link component and NavLink provided by react router dom
-2. useNavigate hook provided by react router dom -- programitical navigation
+4. To consume the data we use hook called useContext, it accepts the createdContext method being used in app
 
 Tasks:
 
 1. Repeat the class
-2. Fill all the screens with content - login , registration , about
-3. why not to use anchor tags in react
-4. Difference between static and dynamic navigations
-5. Design a side bar and provide navigations
-
-useParams:
-It is used to collect the dynamic part of the url
-
-Tasks:
-
-1. Repeat the class
-2. Fill the categories screen with all categories
-3. give product detail screen for every product inside categories screen
-4. recipes and recipe detail screens in new react project
-5. what is lazy loading in react
+2. Global counter using useContext and useState
+3. what is prop drilling and drawbacks
+4. Try context with different data types
+5. implement dark theme in react app using context api

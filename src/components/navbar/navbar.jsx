@@ -1,5 +1,7 @@
 import { Link, NavLink } from "react-router-dom"
 import "./navbar.css"
+import { useContext } from "react"
+import { UserDetails } from "../../navigations/navigation-stack"
 
 
 
@@ -7,10 +9,13 @@ import "./navbar.css"
 
 const NavBar=()=>{
 
+
+const {darkTheme}=useContext(UserDetails)
+
     const linkStyle={textDecoration:"none",color:"blue"}
     const liStyle={margin:"10px"}
     return(
-        <nav className="navbar navbar-expand-sm bg-light navbar-light">
+        <nav className={`navbar navbar-expand-sm bg-${darkTheme ? "dark":"light"} navbar-${darkTheme ? "dark":"light"}`}>
         <div className="container-fluid">
           <ul className="navbar-nav">
             <li className="nav-item" style={liStyle} >

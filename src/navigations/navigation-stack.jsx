@@ -8,18 +8,43 @@ import { JewelleryScreen } from "../screens/jewellery-screen"
 import { ElectronicsScreen } from "../screens/electronics-screen"
 import ProductScreen from "../screens/product-screen"
 import ProductDetailScreen from "../screens/product-detail-screen"
+import { createContext, useState } from "react"
 
 
 
 
+
+export const UserDetails=createContext()
+const ThemeData=createContext()
 
 
 const NavigationStack=()=>{
 
+    const[username,setUsername]=useState("ram")
+    const [isDark,setIsDark]=useState(true)
+    const[salary,setSalary]=useState(10000)
+
+    const darkHandler=()=>{
+        debugger
+        setIsDark(!isDark)
+    }
+
+    const salaryHandler=()=>{
+        setSalary(salary+1000)
+    }
+
+
     return(
+        <ThemeData.Provider value={{myFavColor:"green"}} >
 
-
-        <>
+        <UserDetails.Provider value={{
+            username:"ram",
+            darkTheme:isDark,
+            salary,
+            darkHandler,
+            salaryHandler
+        }}  >
+              <>
         <NavBar/>
 
         {
@@ -59,6 +84,13 @@ const NavigationStack=()=>{
         }
         
         </>
+
+        </UserDetails.Provider>
+
+        </ThemeData.Provider>
+
+
+      
    
        
 
