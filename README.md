@@ -1,39 +1,59 @@
-useState - local state management
+useState - create and manage the data with in a component
 
-Types of state management :
+useState + useContext - global state management
 
-1. local state management - creating and managing data with in the component (useState)
-2. global state management - creating and managing can be done through out the application
+useReducer - create and manage the data with in a component , when our state relies on the complex logics
 
-global state management 3 techniques :
+useReducer + useContext - global state management for complex logics in the state
 
-1. Props -- prop drilling : passing data to the final component through out every level of component tree , even though intermediate components not using the data
+ex :  
+{
+username: "raju",
+age :33,
+todos : ["woke up at 8am","Breakfast at 10am"],
+homeAdress:{
 
-drawbacks:
+}
+}
 
-Code Complexity: As components grow, prop drilling increases code complexity as it is difficult to track the flow of data through various components.
-Reduced Maintainability: It will become very challenging to maintain the code with prop drilling. When changes are required in the data flow, you need to make changes in many components.
-Performance Overhead: We have to pass props through unnecessary intermediary components which can impact performance.
-Decreased Component Reusability: Components used in prop drilling become tightly coupled to the structure of the parent components, so it very difficult to use it on other parts of the application.
-Increased Development Time: Prop drilling often requires additional planning to implement. This can slow down the development process, especially when the component hierarchies is complex.
+useReducer syntax :
 
-2. Context api
-3. Redux : third party package
+it accepts 2 args
 
-context api : it is the way to manage the state in react application globally by avoiding prop drilling
+1. reducerFunction
+   2.initialState
 
-steps to create context api in react app:
+it returns array, which contains 2 values 1. current state 2. dispatch function
 
-1. Identify the set of components that needs to share the data -- whole app
-2. create some data ex: username:"sai" -- and react will provide createContext method for creating the context
-3. wrap the created context using provider and pass value prop for the wrapped provider
+const [currentState,dispatchFunction]=useReducer(reducerFunction,initialState)
 
-4. To consume the data we use hook called useContext, it accepts the createdContext method being used in app
+reducerFunction : It is a pure function , it takes action and state as parameters and based on the action corresponding state will change
+
+const reducer=(state,action)=>{
+action === "INCREMENT_AGE" --- {...state,age:state.age+1}
+action === "CHANGE_USERNAME" --- {...state,username:"new name"}
+}
+
+ex: Age -- > INCREMENT_AGE , DECREMENT_AGE
+
+action : action is an object which tells what to happen to a state
+action can contains properties
+type is mandatory property
+payload is optional
+
+{
+type : "INCREMENT_AGE",
+payload: 2
+}
+
+dispatchFunction : To dispatch an action we must use dispatchFunction
+which accepts the action
 
 Tasks:
 
 1. Repeat the class
-2. Global counter using useContext and useState
-3. what is prop drilling and drawbacks
-4. Try context with different data types
-5. implement dark theme in react app using context api
+2. CRUD using useReducer
+3. useReducer + useContext global counter (https://www.geeksforgeeks.org/how-to-combine-usecontext-with-usereducer/)
+4. when to use useReducer over useState
+5. difference between useReducer over useState
+6. deboucing and throatling

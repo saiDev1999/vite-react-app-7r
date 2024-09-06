@@ -25,7 +25,6 @@ const NavigationStack=()=>{
     const[salary,setSalary]=useState(10000)
 
     const darkHandler=()=>{
-        debugger
         setIsDark(!isDark)
     }
 
