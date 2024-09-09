@@ -1,12 +1,15 @@
 import { useContext } from "react"
 import NavBar from "../components/navbar/navbar"
-import { UserDetails } from "../navigations/navigation-stack"
+import { GlobalCounter, UserDetails } from "../navigations/navigation-stack"
 import UseReducerExample from "../components/hooks/useReducer/useReducer"
 
 
 
 const AboutScreen=()=>{
     const {darkHandler,salaryHandler}=useContext(UserDetails)
+
+    const {currentState,dispatch}=useContext(GlobalCounter)
+    console.log(currentState)
 
     const changeTheme=()=>{
         darkHandler()
@@ -16,7 +19,7 @@ const AboutScreen=()=>{
         <>
         {/* <NavBar/> */}
         
-        <h2>Welcome to About Screen</h2>
+        <h2>Welcome to About Screen {currentState.count}</h2>
         <UseReducerExample/>
         <button onClick={changeTheme} >Change theme</button>
 

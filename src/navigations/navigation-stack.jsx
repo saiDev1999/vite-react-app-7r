@@ -8,7 +8,8 @@ import { JewelleryScreen } from "../screens/jewellery-screen"
 import { ElectronicsScreen } from "../screens/electronics-screen"
 import ProductScreen from "../screens/product-screen"
 import ProductDetailScreen from "../screens/product-detail-screen"
-import { createContext, useState } from "react"
+import { createContext, useReducer, useState } from "react"
+import { counterReducer, initialState } from "./counterHelper"
 
 
 
@@ -16,6 +17,7 @@ import { createContext, useState } from "react"
 
 export const UserDetails=createContext()
 const ThemeData=createContext()
+export const GlobalCounter=createContext()
 
 
 const NavigationStack=()=>{
@@ -23,6 +25,8 @@ const NavigationStack=()=>{
     const[username,setUsername]=useState("ram")
     const [isDark,setIsDark]=useState(true)
     const[salary,setSalary]=useState(10000)
+
+    const[currentState,dispatch]=useReducer(counterReducer,initialState)
 
     const darkHandler=()=>{
         setIsDark(!isDark)
@@ -34,6 +38,11 @@ const NavigationStack=()=>{
 
 
     return(
+        <GlobalCounter.Provider  value={
+            {currentState:currentState,dispatch:dispatch}
+        }  >
+
+
         <ThemeData.Provider value={{myFavColor:"green"}} >
 
         <UserDetails.Provider value={{
@@ -87,6 +96,7 @@ const NavigationStack=()=>{
         </UserDetails.Provider>
 
         </ThemeData.Provider>
+        </GlobalCounter.Provider>
 
 
       

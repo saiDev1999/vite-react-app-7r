@@ -1,59 +1,62 @@
-useState - create and manage the data with in a component
+HOC in react : (higher order component)
 
-useState + useContext - global state management
+HOC is a pattern in react where a function takes the component as an argument and returns the enhanced component
 
-useReducer - create and manage the data with in a component , when our state relies on the complex logics
+Using this pattern we can reuse the component functionality with out writing multiple times
 
-useReducer + useContext - global state management for complex logics in the state
+1. withCounter(Component)
 
-ex :  
-{
-username: "raju",
-age :33,
-todos : ["woke up at 8am","Breakfast at 10am"],
-homeAdress:{
+syntax : const withCounter =(Component)=>{
+
+return ()=>{
+
+      return <Component   state={0} handler={increment}   >
 
 }
+
 }
 
-useReducer syntax :
+const redRanger = redSuit(Jack)
 
-it accepts 2 args
+const enhancedProfile = withProfile(Screen2)
+const enhancedProfile = withProfile(Screen3)
 
-1. reducerFunction
-   2.initialState
+2.  const withProfile =(Component)=>{
 
-it returns array, which contains 2 values 1. current state 2. dispatch function
+    return()=>{
 
-const [currentState,dispatchFunction]=useReducer(reducerFunction,initialState)
+    const [profileData,setProfileData]=useState({})
 
-reducerFunction : It is a pure function , it takes action and state as parameters and based on the action corresponding state will change
+    useEffect (()=>{
+    //api
+    },[])
 
-const reducer=(state,action)=>{
-action === "INCREMENT_AGE" --- {...state,age:state.age+1}
-action === "CHANGE_USERNAME" --- {...state,username:"new name"}
-}
+          return <Component   profile={profileData}  >
 
-ex: Age -- > INCREMENT_AGE , DECREMENT_AGE
+    }
+    }
 
-action : action is an object which tells what to happen to a state
-action can contains properties
-type is mandatory property
-payload is optional
+React.memo(HomeScreen)
 
-{
-type : "INCREMENT_AGE",
-payload: 2
-}
-
-dispatchFunction : To dispatch an action we must use dispatchFunction
-which accepts the action
+1. Recipe maker
+1. Login page - dummy json users
+1. Main screen for recipe listing , search functionailty , see more , add to favourites ,go to favourites
+1. detial recipe screen - add to favourites , go back , Go to favourites
+1. Favourite screen - remove from favourites
+1. Header - count of favourite recipes
+1. Weather -
+   1. current location weather ,
+   2. search by city ,
+   3. history of previous search locations
+1. Country finder
+1. Pagination
+1. Listing screen
+1. detail screen
 
 Tasks:
 
 1. Repeat the class
-2. CRUD using useReducer
-3. useReducer + useContext global counter (https://www.geeksforgeeks.org/how-to-combine-usecontext-with-usereducer/)
-4. when to use useReducer over useState
-5. difference between useReducer over useState
-6. deboucing and throatling
+2. Firebase google - POC - Proof of concept
+3. Patterns in react ?
+4. what is the HOC pattern ?
+5. what is render prop pattern ? give examples (https://www.patterns.dev/react/render-props-pattern)
