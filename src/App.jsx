@@ -23,6 +23,7 @@ import RecipeComponent from "./components/recipes/recipe"
 import UseEffectExample from "./components/hooks/useEffect/useEffectEx"
 // import UseEffectExample2 from "./components/hooks/useEffect/useEffectEx2"
 import UseEffectExample3 from "./components/hooks/useEffect/useEffectEx3"
+import UseMemo from "./components/hooks/useMemo/useMemo"
 
 // import "./App.css"
 
@@ -47,7 +48,8 @@ import UseEffectExample3 from "./components/hooks/useEffect/useEffectEx3"
 const App =()=>{
   return(
     <div>
-      <UseEffectExample3/>
+      <UseMemo/>
+      {/* <UseEffectExample3/> */}
 
       {/* <UseEffectExample2/> */}
       {/* <UseEffectExample/> */}
