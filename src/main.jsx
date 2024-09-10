@@ -5,14 +5,16 @@ import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavigationStack from './navigations/navigation-stack.jsx';
 import { BrowserRouter } from 'react-router-dom';
-import UseMemo from './components/hooks/useMemo/useMemo.jsx';
-import UseMemoEx2 from './components/hooks/useMemo/useMemoEx.jsx';
+import Container from './components/hooks/useMemo/container.jsx';
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
          <BrowserRouter>
+         <Container/>
    
-<UseMemoEx2/>
+
 </BrowserRouter>
   </React.StrictMode>,
 )

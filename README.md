@@ -15,3 +15,12 @@ syntax : useMemo(()=>{},[])
 Day 1 - COFFEE -Milk -50 rupees BIRYANI -- 300  
  Day 2 - COFFEE -Milk -50 rupees BIRYANI -- 300
 Day 3 - COFFEE -Milk -50 rupees BIRYANI -- 300
+
+Tasks :
+
+1. Repeat the class
+2. How to debug the react application -- ex: Reactotron
+3. Use reactron for debugging react application - https://docs.infinite.red/reactotron/quick-start/react-js/
+4. useMemo 5 scenerios
+5. difference between useMemo and useCallback
+6. difference between react.memo and useMemo
