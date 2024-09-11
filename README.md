@@ -1,26 +1,33 @@
-Memorization :
+useCallback :
 
-Memoreization is a advanced technique in react which is used to cache the result of the functions or entire functions without being recalculation
+useCallback is a hook in react functional components which is used to memoize the functions , without recalculating the functions when same inputs were given
 
-3 ways :
+syntax: useCallback(()=>{},[])
 
-1. React.memo()
-2. useMemo()
-3. useCallback()
+using useCallback we can prevent the children re-rendering
 
-useMemo : useMemo is a hook in react functional based component which memorizes the result returned by function, without being recalculated when same inputs were given
+<Button  title="Login"  onPress={onPress}   >
 
-syntax : useMemo(()=>{},[])
+custom hooks :
 
-Day 1 - COFFEE -Milk -50 rupees BIRYANI -- 300  
- Day 2 - COFFEE -Milk -50 rupees BIRYANI -- 300
-Day 3 - COFFEE -Milk -50 rupees BIRYANI -- 300
+custom hooks is used for common functionality in the component with out writing in multiple components
 
-Tasks :
+custom hooks were designed using existing hooks in react
+custom hooks should also follow the rules of hooks
+
+scenario : design a hook for data fetching
+
+ex: useFetch, useAxios
+
+hooks were reusable functions
+
+const [data,setData]=useState([])
+
+useEffect(()=>{},[])
+
+Tasks:
 
 1. Repeat the class
-2. How to debug the react application -- ex: Reactotron
-3. Use reactron for debugging react application - https://docs.infinite.red/reactotron/quick-start/react-js/
-4. useMemo 5 scenerios
-5. difference between useMemo and useCallback
-6. difference between react.memo and useMemo
+2. How to handle multiple async calls in the component
+3. explore about promise all, promise race
+4. design counter, local storage, internet hook, previous value, lat and long hook

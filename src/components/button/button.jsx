@@ -1,9 +1,10 @@
+import React from "react"
 
 
 
 const CustomButton =(prop)=>{
+    console.log("child re-render",prop.text)
     const {text="button",onPress=()=>{},bgColor="green"}=prop
-    const buttonText="Click me" 
 
     const buttonStyles={backgroundColor:"red",color:"white"}
     return(
@@ -11,4 +12,4 @@ const CustomButton =(prop)=>{
     )
 }
 
-export default CustomButton
+export default React.memo(CustomButton)

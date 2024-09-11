@@ -1,15 +1,14 @@
-
-
+import React from "react"
 
 
 
 const MainHeading=(prop)=>{
     console.log(prop,"main heading prop")
-    const{heading,children}=prop
+    const{heading}=prop
     return(
   
 <div>
-    {children}
+
    
         <h1>{heading}</h1>
         </div>
@@ -17,7 +16,7 @@ const MainHeading=(prop)=>{
 
     )
 }
-export default MainHeading
+export default React.memo(MainHeading)
 
  export const SecondaryHeading=(prop)=>{
     const{heading}=prop

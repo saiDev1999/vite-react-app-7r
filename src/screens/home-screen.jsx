@@ -4,6 +4,7 @@ import NavBar from "../components/navbar/navbar"
 import { UserDetails } from "../navigations/navigation-stack"
 import withProfile from "../hoc/withProfile"
 import withCounter from "../hoc/withCounter"
+import useAxios from "../components/hooks/customHooks/useAxios"
 
 
 
@@ -11,8 +12,16 @@ import withCounter from "../hoc/withCounter"
 
 
 const HomeScreen=({count,incrementCount})=>{
-    // console.log(profile.firstName)
+   const[recipes,error,loading]=useAxios("https://dummyjson.com/recipes")
+   console.log(recipes,"recipesrecipes");
     const{salary}=useContext(UserDetails)
+
+    if(loading){
+        return <h3>Please wait....</h3>
+    }
+    if(error){
+        return <h2>{JSON.stringify(error)}</h2>
+    }
     return(
         <>
          <h2>{count}</h2>
