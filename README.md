@@ -31,3 +31,4 @@ Tasks:
 2. How to handle multiple async calls in the component
 3. explore about promise all, promise race
 4. design counter, local storage, internet hook, previous value, lat and long hook
+5. what is code review in git, PR checklist
